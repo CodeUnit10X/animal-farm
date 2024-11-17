@@ -1,0 +1,4 @@
+config BR2_PACKAGE_LORAWAN
+	bool "lorawan"
+	help
+		lorawan and lora examples for Waveshare hats
