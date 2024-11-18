@@ -30,7 +30,9 @@ Buildroot image with support for Waveshare LorA hat userspace tinkering, uio irq
 To enable Wi-Fi make sure you have wpa_supplicant.conf at rootfs_overlay/etc for your target
 
 #This is an example add your ssid and psk here 
+'''
 network={
 	ssid="CookieWagon"
 	psk=<whatever your network key is>
 }
+'''
