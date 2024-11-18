@@ -33,6 +33,6 @@ To enable Wi-Fi make sure you have wpa_supplicant.conf at rootfs_overlay/etc for
 '''
 network={
 	ssid="CookieWagon"
-	psk=<whatever your network key is>
+	psk=whatever your network key is
 }
 '''
