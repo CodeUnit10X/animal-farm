@@ -1,4 +1,8 @@
+
+
 # Buildroot configurations for vairous Raspberry Pis and Beagle Bones.
+
+Buildroot configurations for various ARM boards, mostly Raspberry Pis.
 
 Clone buildroot or use existing buildroot
 
