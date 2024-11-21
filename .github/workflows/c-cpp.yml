@@ -1,0 +1,30 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Clone buildroot/buildroot PUBLIC repository
+      uses: buildroot/clone-github-repo-action@2024.08.2
+      with:
+        depth: 1
+        branch: 'main'
+        owner: 'buildroot'
+        repository: 'poc-github-actions'
+    - name: configure
+      run: ./configure
+    - name: make
+      run: make
+    - name: make check
+      run: make check
+    - name: make distcheck
+      run: make distcheck
