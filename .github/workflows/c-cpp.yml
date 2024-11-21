@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Clone buildroot/buildroot PUBLIC repository
-      uses: buildroot/clone-github-repo-action@2024.08.2
+      uses: buildroot/buildroot@2024.08.2
       with:
         depth: 1
         branch: 'main'
