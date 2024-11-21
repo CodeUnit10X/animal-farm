@@ -17,7 +17,9 @@ jobs:
       with:
         repository: 'buildroot/buildroot'
     - name: configure
-      run: ./configure
+      run: |
+      cd <repository-name>
+      ls -la
     - name: make
       run: make
     - name: make check
