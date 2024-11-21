@@ -16,9 +16,10 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: 'buildroot/buildroot'
+        path: buildroot
     - name: Access cloned repository content
       run: |
-        cd <repository-name>
+        cd buildroot
         ls -la        
     - name: make
       run: make
