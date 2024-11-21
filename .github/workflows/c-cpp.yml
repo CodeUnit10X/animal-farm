@@ -12,8 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Current Repo
-      uses: action/checkout@v4 
     - name: Clone buildroot
       uses: actions/checkout@v4
       with:
