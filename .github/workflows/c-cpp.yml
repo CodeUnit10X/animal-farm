@@ -22,9 +22,11 @@ jobs:
     - name: Configure Buildroot
       run: |
         cd buildroot
-        make BR2_EXTERNAL=.. raspberrypi_2w_custom_defconfig
+        make BR2_EXTERNAL=<repository-name> raspberrypi_2w_custom_defconfig
     - name: make
-      run: make
+      run: |
+        cd buildroot
+        make
     - name: make check
       run: make check
     - name: make distcheck
