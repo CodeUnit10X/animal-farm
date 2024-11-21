@@ -12,14 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Clone buildroot/buildroot PUBLIC repository
-      uses: buildroot/buildroot@2024.08.2
+    - name: Clone buildroot
+      uses: actions/checkout@v4
       with:
-        depth: 1
-        branch: 'main'
-        owner: 'buildroot'
-        repository: 'poc-github-actions'
+        repository: 'buildroot/buildroot'
     - name: configure
       run: ./configure
     - name: make
