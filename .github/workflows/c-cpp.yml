@@ -20,7 +20,6 @@ jobs:
       run: |
         cd <repository-name>
         ls -la
-    - name: configure
     - name: make
       run: make
     - name: make check
