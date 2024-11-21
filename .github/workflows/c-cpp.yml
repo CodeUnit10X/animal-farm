@@ -19,6 +19,15 @@ jobs:
       with:
         repository: 'buildroot/buildroot'
         path: buildroot
+    - name: Restore cached buildroot host 
+      id: brhost-restore
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+            buildroot/output/host
+            buildroot/output/build/host-*
+        key: ${{ runner.os }}-brhost
+        
     - name: Configure Buildroot
       run: |
         cd buildroot
