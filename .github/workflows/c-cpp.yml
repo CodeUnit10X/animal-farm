@@ -12,15 +12,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout Current Repo
+      uses: action/checkout@v4 
     - name: Clone buildroot
       uses: actions/checkout@v4
       with:
         repository: 'buildroot/buildroot'
         path: buildroot
-    - name: Access cloned repository content
+    - name: Configure Buildroot
       run: |
         cd buildroot
-        ls -la        
+        make BR2_EXTERNAL=. raspberrypi_2w_custom_defconfig
     - name: make
       run: make
     - name: make check
